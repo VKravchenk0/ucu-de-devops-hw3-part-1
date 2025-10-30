@@ -1,5 +1,13 @@
-https://study.ucu.edu.ua/course/devdataops-2025-2026/lesson/kubernetes
-https://dev.to/dm8ry/how-to-install-minikube-on-ubuntu-2404-2gdj
-https://github.com/kubernetes/minikube/issues/11020
+```bash
 
 minikube start --kubernetes-version=v1.32.0 
+
+kubectl create namespace hw3-postgres-pgadmin
+kubectl config set-context --current --namespace=hw3-postgres-pgadmin
+
+kubectl apply -f . --recursive
+
+sudo --preserve-env=HOME minikube tunnel
+```
+
+http://localhost
